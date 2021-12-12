@@ -4,7 +4,7 @@ require "propshaft/errors"
 class Propshaft::Compilers::CssAssetUrls
   attr_reader :assembly
 
-  ASSET_URL_PATTERN = /url\(\s*["']?(?!(?:\#|data|http))([^"'\s)]+)\s*["']?\)/
+  ASSET_URL_PATTERN = /url\(\s*["']?(?!(?:\#|data|http))([^"'\s?)]+)(\?[^"']+)?\s*["']?\)/
 
   def initialize(assembly)
     @assembly = assembly
